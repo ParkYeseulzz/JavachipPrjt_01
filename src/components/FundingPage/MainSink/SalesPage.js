@@ -98,22 +98,22 @@ const SalesPage = () => {
         </div>
         <Element name="section1">
           <h2>소개1</h2>
-          <img src="/images/Fsink1.jpg" alt="싱크볼메인1" />
-          <img src="/images/Fsink2.jpg" alt="싱크볼메인2" />
-          <img src="/images/Fsink3.jpg" alt="싱크볼메인3" />
+          <img src={`${process.env.PUBLIC_URL}/images/Fsink1.jpg`} alt="싱크볼메인1" />
+          <img src={`${process.env.PUBLIC_URL}/images/Fsink2.jpg`} alt="싱크볼메인2" />
+          <img src={`${process.env.PUBLIC_URL}/images/Fsink3.jpg`} alt="싱크볼메인3" />
         </Element>
         <Element name="section2">
           <h2>소개2</h2>
-          <img src="/images/Fsink4.jpg" alt="싱크볼메인4" />
-          <img src="/images/Fsink5.gif" alt="싱크볼메인5" />
-          <img src="/images/Fsink6.gif" alt="싱크볼메인6" />
-          <img src="/images/Fsink7.jpg" alt="싱크볼메인7" />
+          <img src={`${process.env.PUBLIC_URL}/images/Fsink4.jpg`} alt="싱크볼메인4" />
+          <img src={`${process.env.PUBLIC_URL}/images/Fsink5.gif`} alt="싱크볼메인5" />
+          <img src={`${process.env.PUBLIC_URL}/images/Fsink6.gif`} alt="싱크볼메인6" />
+          <img src={`${process.env.PUBLIC_URL}/images/Fsink7.jpg`} alt="싱크볼메인7" />
         </Element>
         <Element name="section3">
           <h2>소개3</h2>
-          <img src="/images/Fsink8.jpg" alt="싱크볼메인8" />
-          <img src="/images/Fsink9.jpg" alt="싱크볼메인9" />
-          <img src="/images/Fsink10.jpg" alt="싱크볼메인10" />
+          <img src={`${process.env.PUBLIC_URL}/images/Fsink8.jpg`} alt="싱크볼메인8" />
+          <img src={`${process.env.PUBLIC_URL}/images/Fsink9.jpg`} alt="싱크볼메인9" />
+          <img src={`${process.env.PUBLIC_URL}/images/Fsink10.jpg`} alt="싱크볼메인10" />
         </Element>
       </div>
       
@@ -163,21 +163,26 @@ const SalesPage = () => {
         <div className="F_action-buttons">
           <div className="F_interaction-buttons">
             <button className="F_like-button" onClick={handleLikeClick}>
-              <img src="/images/하트.png" alt="F_Heart Icon" /> {likeCount}
+              <img src={`${process.env.PUBLIC_URL}/images/하트.png`} alt="F_Heart Icon" /> {likeCount}
             </button>
             <button className="F_share-button" onClick={handlePopupToggle}>
-              <img src="/images/공유.png" alt="F_Share Icon" /> 공유하기
+              <img src={`${process.env.PUBLIC_URL}/images/공유.png`} alt="F_Share Icon" /> 공유하기
             </button>
           </div>
-          <Link to = "/login" className="F_funding-button">펀딩하기</Link>
+          <Link to="/login" className="F_funding-button">펀딩하기</Link>
         </div>
 
         {isPopupVisible && (
           <div className="F_share-popup">
             <button className='F_kakao' onClick={() => handleSocialShare('kakao')}>
-              <img  src='/images/카카오톡.png' alt="카카오톡 아이콘"/>카카오톡으로 공유하기</button>
-            <button className='F_email' onClick={handleEmailShare}><img src='/images/링크보드.png'  alt="이메일 아이콘" />이메일로 공유하기</button>
-            <button className='F_link' onClick={() => handleSocialShare('clipboard')}><img src='/images/이메일.png' alt="클립보드 아이콘" />링크 보드에 복사하기</button>
+              <img src={`${process.env.PUBLIC_URL}/images/카카오톡.png`} alt="카카오톡 아이콘" />카카오톡으로 공유하기
+            </button>
+            <button className='F_email' onClick={handleEmailShare}>
+              <img src={`${process.env.PUBLIC_URL}/images/링크보드.png`} alt="이메일 아이콘" />이메일로 공유하기
+            </button>
+            <button className='F_link' onClick={() => handleSocialShare('clipboard')}>
+              <img src={`${process.env.PUBLIC_URL}/images/이메일.png`} alt="클립보드 아이콘" />링크 보드에 복사하기
+            </button>
             <button onClick={handlePopupToggle}>닫기</button>
           </div>
         )}

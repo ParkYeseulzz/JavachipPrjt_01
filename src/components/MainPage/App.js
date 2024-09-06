@@ -8,6 +8,7 @@ import Interests from './Interests';
 import './Main.css'; // Main.css 파일을 임포트합니다.
 import { AuthProvider, AuthContext } from '../api/AuthContext';
 
+
 const App = () => { // App 컴포넌트를 정의합니다.
 
   const { setIsLoggedIn } = useContext(AuthContext);

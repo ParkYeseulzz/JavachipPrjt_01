@@ -29,12 +29,12 @@ const GuidePopup = ({ onClose }) => {
 
   // 후원자 가이드 페이지로 이동하는 함수
   const handleNavigateSponsor = () => {
-    window.open('/sponsor', '_blank');  // 후원자 페이지를 새 창에서 열기
+    window.open('https://ys2ys2.github.io/JavachipPrjt_01/#/sponsor', '_blank');  // 후원자 페이지를 새 창에서 열기
   };
 
   // 창작자 가이드 페이지로 이동하는 함수
   const handleNavigateCreator = () => {
-    window.open('/creator', '_blank');  // 창작자 페이지를 새 창에서 열기
+    window.open('https://ys2ys2.github.io/JavachipPrjt_01/#/creator', '_blank');  // 창작자 페이지를 새 창에서 열기
   };
 
   return (

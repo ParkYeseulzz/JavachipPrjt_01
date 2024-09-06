@@ -35,12 +35,12 @@ function ProductItem() {
   };
 
   const images = [
-    '/images/sink1.jpg',
-    '/images/sink2.jpg',
-    '/images/sink3.jpg',
-    '/images/sink4.jpg',
-    '/images/sink5.jpg',
-    '/images/sink6.jpg',
+    `${process.env.PUBLIC_URL}/images/sink1.jpg`,
+    `${process.env.PUBLIC_URL}/images/sink2.jpg`,
+    `${process.env.PUBLIC_URL}/images/sink3.jpg`,
+    `${process.env.PUBLIC_URL}/images/sink4.jpg`,
+    `${process.env.PUBLIC_URL}/images/sink5.jpg`,
+    `${process.env.PUBLIC_URL}/images/sink6.jpg`,
   ];
 
   const settings = {

@@ -24,7 +24,6 @@ const SalesPage = () => {
     );
   };
 
-
   // 좋아요 버튼 클릭 시 처리 함수
   const handleLikeClick = () => {
     setLikeCount(likeCount + 1);
@@ -94,25 +93,25 @@ const SalesPage = () => {
 
         <Element name="section1">
           <h2>소개1</h2>
-          <img src="/images/Conan01.gif" alt="코난01" />
-          <img src="/images/Conan02.jfif" alt="코난02" />
-          <img src="/images/Conan03.gif" alt="코난03" />
+          <img src={`${process.env.PUBLIC_URL}/images/Conan01.gif`} alt="코난01" />
+          <img src={`${process.env.PUBLIC_URL}/images/Conan02.jfif`} alt="코난02" />
+          <img src={`${process.env.PUBLIC_URL}/images/Conan03.gif`} alt="코난03" />
         </Element>
         <Element name="section2">
           <h2>소개2</h2>
-          <img src="/images/Conan04.jfif" alt="코난04" />
+          <img src={`${process.env.PUBLIC_URL}/images/Conan04.jfif`} alt="코난04" />
         </Element>
         <Element name="section3">
           <h2>소개3</h2>
-          <img src="/images/Conan05.jfif" alt="코난05" />
-          <img src="/images/Conan06.jpg" alt="코난06" />
-          <img src="/images/Conan07.gif" alt="코난07" />
+          <img src={`${process.env.PUBLIC_URL}/images/Conan05.jfif`} alt="코난05" />
+          <img src={`${process.env.PUBLIC_URL}/images/Conan06.jpg`} alt="코난06" />
+          <img src={`${process.env.PUBLIC_URL}/images/Conan07.gif`} alt="코난07" />
         </Element>
         <Element name="section4">
           <h2>소개4</h2>
-          <img src="/images/Conan08.webp" alt="코난08" />
-          <img src="/images/Conan09.webp" alt="코난09" />
-          <img src="/images/Conan10.jfif" alt="코난10" />
+          <img src={`${process.env.PUBLIC_URL}/images/Conan08.webp`} alt="코난08" />
+          <img src={`${process.env.PUBLIC_URL}/images/Conan09.webp`} alt="코난09" />
+          <img src={`${process.env.PUBLIC_URL}/images/Conan10.jfif`} alt="코난10" />
         </Element>
       </div>
       
@@ -162,21 +161,21 @@ const SalesPage = () => {
         <div className="F_action-buttons">
           <div className="F_interaction-buttons">
             <button className="F_like-button" onClick={handleLikeClick}>
-              <img src="/images/하트.png" alt="F_Heart Icon" /> {likeCount}
+              <img src={`${process.env.PUBLIC_URL}/images/하트.png`} alt="F_Heart Icon" /> {likeCount}
             </button>
             <button className="F_share-button" onClick={handlePopupToggle}>
-              <img src="/images/공유.png" alt="F_Share Icon" /> 공유하기
+              <img src={`${process.env.PUBLIC_URL}/images/공유.png`} alt="F_Share Icon" /> 공유하기
             </button>
           </div>
-          <Link to = "/login" className="F_funding-button">펀딩하기</Link>
+          <Link to="/login" className="F_funding-button">펀딩하기</Link>
         </div>
 
         {isPopupVisible && (
           <div className="F_share-popup">
             <button className='F_kakao' onClick={() => handleSocialShare('kakao')}>
-              <img  src='/images/카카오톡.png' alt="카카오톡 아이콘"/>카카오톡으로 공유하기</button>
-            <button className='F_email' onClick={handleEmailShare}><img src='/images/링크보드.png'  alt="이메일 아이콘" />이메일로 공유하기</button>
-            <button className='F_link' onClick={() => handleSocialShare('clipboard')}><img src='/images/이메일.png' alt="클립보드 아이콘" />링크 보드에 복사하기</button>
+              <img  src={`${process.env.PUBLIC_URL}/images/카카오톡.png`} alt="카카오톡 아이콘"/>카카오톡으로 공유하기</button>
+            <button className='F_email' onClick={handleEmailShare}><img src={`${process.env.PUBLIC_URL}/images/링크보드.png`}  alt="이메일 아이콘" />이메일로 공유하기</button>
+            <button className='F_link' onClick={() => handleSocialShare('clipboard')}><img src={`${process.env.PUBLIC_URL}/images/이메일.png`} alt="클립보드 아이콘" />링크 보드에 복사하기</button>
             <button onClick={handlePopupToggle}>닫기</button>
           </div>
         )}

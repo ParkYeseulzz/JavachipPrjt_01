@@ -1,6 +1,8 @@
 import React from 'react';
 import './Main.css'; // CSS 파일을 임포트합니다.
 import Footer from './images/Footer.gif';// 900x300px 이미지 파일을 임포트합니다.
+import { Link } from 'react-router-dom'; // Link 컴포넌트를 임포트합니다.
+
 
 function Guide() {
     return (
@@ -14,8 +16,8 @@ function Guide() {
                   <p>창작자 가이드와 첫 후원 가이드를 확인해 보세요!</p>
                 </div>
                 <div className="footer-buttons">
-                <a href="/creator" target="_blank" rel="noopener noreferrer" className="guide-button">창작자 가이드</a>
-                <a href="/sponsor" target="_blank" rel="noopener noreferrer" className="donation-button">후원자 가이드</a>
+                <Link to="/creator" className="guide-button">창작자 가이드</Link>
+                <Link to="/sponsor" className="donation-button">후원자 가이드</Link>
                 </div>
               </div>
 

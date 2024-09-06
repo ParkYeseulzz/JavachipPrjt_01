@@ -51,8 +51,8 @@ function ProjectImage() {
           <p className="section-title11">지금 함께 만드는 성공</p>
           <div className="image-row">
               <div className="image-item" onClick={handleImageClick}> {/* 이미지 클릭 시 handleImageClick 함수가 호출 */}
-              <img src="/images/piBanner01.jpg" alt="Banner"  className='image'/>
-                  <div className="image-caption">
+              <img src={`${process.env.PUBLIC_URL}/images/piBanner01.jpg`} alt="Banner" className='image' />
+              <div className="image-caption">
                       <p className="achievement">6,568% 달성 </p>
                       <p className="description">[명탐정코난] 연재 '30주년' 공식 스페셜 굿즈!</p>
                   </div>

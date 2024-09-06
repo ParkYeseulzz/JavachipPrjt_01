@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes, useLocation } from 'react-router-dom'; // HashRouter 사용
 import MainPageApp from './components/MainPage/App';
 import FundingPageApp from './components/FundingPage/App';
 import SalesPage from './components/FundingPage/Main/SalesPage';
@@ -26,8 +26,7 @@ function App() {
 
   return (
     <AuthProvider>
-      <Router>
-        {/* useLocation 훅을 사용하는 AppContent 컴포넌트 */}
+      <Router> {/* HashRouter로 변경 */}
         <AppContent
           isGuidePopupVisible={isGuidePopupVisible}
           setGuidePopupVisible={setGuidePopupVisible}
@@ -44,7 +43,6 @@ function AppContent({
   const location = useLocation(); // 현재 경로를 확인하기 위한 훅
 
   useEffect(() => {
-    // 메인 페이지('/') 또는 후원자('/sponsor'), 창작자('/creator') 페이지에 있을 때만 팝업을 활성화
     if (
       location.pathname === '/' ||
       location.pathname === '/sponsor' ||

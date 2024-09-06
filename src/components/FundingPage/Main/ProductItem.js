@@ -33,13 +33,13 @@ function ProductItem() {
   };
 
   const images = [
-    '/images/piBanner01.jpg',
-    '/images/piBanner02.jpg',
-    '/images/piBanner03.jpg',
-    '/images/piBanner04.gif',
-    '/images/piBanner05.jpg',
-    '/images/piBanner06.jpg',
-  ];
+    `${process.env.PUBLIC_URL}/images/piBanner01.jpg`,
+    `${process.env.PUBLIC_URL}/images/piBanner02.jpg`,
+    `${process.env.PUBLIC_URL}/images/piBanner03.jpg`,
+    `${process.env.PUBLIC_URL}/images/piBanner04.gif`,
+    `${process.env.PUBLIC_URL}/images/piBanner05.jpg`,
+    `${process.env.PUBLIC_URL}/images/piBanner06.jpg`,
+];
 
   const settings = {
     dots: true,

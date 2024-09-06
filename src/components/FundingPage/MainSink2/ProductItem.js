@@ -33,10 +33,10 @@ function ProductItem() {
   };
 
   const images = [
-    '/images/CD1.jpg',
-    '/images/CD2.jpg',
-    '/images/CD3.jpg',
-    '/images/CD4.jpg',
+    `${process.env.PUBLIC_URL}/images/CD1.jpg`,
+    `${process.env.PUBLIC_URL}/images/CD2.jpg`,
+    `${process.env.PUBLIC_URL}/images/CD3.jpg`,
+    `${process.env.PUBLIC_URL}/images/CD4.jpg`,
   ];
 
   const settings = {

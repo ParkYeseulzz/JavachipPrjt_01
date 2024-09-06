@@ -7,7 +7,6 @@ const product = [
   { id: 1, left: '144개 남음', price: 142800, description: '[펀딩할래! 슈퍼 얼리버드]더블', description2: '플레오맥스 시디플레이어 2SET', shippingCost: '3,300원', limit: '150개', shippingDate: '2024년 9월 초순 (01~10일) 예정' },
   { id: 2, left: '277개 남음', price: 75900, description: '[펀딩할래! 얼리버드] 싱글 ', description2: '플레오맥스 시디플레이어 1SET', shippingCost: '3,300원', limit: '350개', shippingDate:  '2024년 9월 초순 (01~10일) 예정' },
   { id: 3, left: '200개 남음', price: 149900, description: '[펀딩할래! 얼리버드] 더블', description2: '플레오맥스 시디플레이어 2SET', shippingCost: '3,300원', limit: '200개', shippingDate: '2024년 9월 초순 (01~10일) 예정' },
-  
 ];
 
 const SalesPage = () => {
@@ -101,26 +100,25 @@ const SalesPage = () => {
 
         <Element name="section1">
           <h2>소개1</h2>
-          <img src="/images/FCD1.gif" alt="cd1" />
-          <img src="/images/FCD2.gif" alt="cd02" />
-          <img src="/images/FCD3.gif" alt="cd03" />
+          <img src={`${process.env.PUBLIC_URL}/images/FCD1.gif`} alt="cd1" />
+          <img src={`${process.env.PUBLIC_URL}/images/FCD2.gif`} alt="cd02" />
+          <img src={`${process.env.PUBLIC_URL}/images/FCD3.gif`} alt="cd03" />
         </Element>
         <Element name="section2">
           <h2>소개2</h2>
-          <img src="/images/FCD4.gif" alt="cd04" />
+          <img src={`${process.env.PUBLIC_URL}/images/FCD4.gif`} alt="cd04" />
         </Element>
         <Element name="section3">
           <h2>소개3</h2>
-          <img src="/images/FCD5.jpg" alt="cd05" />
-          <img src="/images/FCD6.jpg" alt="cd06" />
-          <img src="/images/FCD7.jpg" alt="cd07" />
+          <img src={`${process.env.PUBLIC_URL}/images/FCD5.jpg`} alt="cd05" />
+          <img src={`${process.env.PUBLIC_URL}/images/FCD6.jpg`} alt="cd06" />
+          <img src={`${process.env.PUBLIC_URL}/images/FCD7.jpg`} alt="cd07" />
         </Element>
         <Element name="section4">
           <h2>소개4</h2>
-          <img src="/images/FCD10.gif" alt="cd09" />
-          <img src="/images/FCD8.jpg" alt="cd08" />
-          <img src="/images/FCD9.jpg" alt="cd09" />
-          
+          <img src={`${process.env.PUBLIC_URL}/images/FCD10.gif`} alt="cd09" />
+          <img src={`${process.env.PUBLIC_URL}/images/FCD8.jpg`} alt="cd08" />
+          <img src={`${process.env.PUBLIC_URL}/images/FCD9.jpg`} alt="cd09" />
         </Element>
       </div>
       
@@ -170,10 +168,10 @@ const SalesPage = () => {
         <div className="F_action-buttons">
           <div className="F_interaction-buttons">
             <button className="F_like-button" onClick={handleLikeClick}>
-              <img src="/images/하트.png" alt="F_Heart Icon" /> {likeCount}
+              <img src={`${process.env.PUBLIC_URL}/images/하트.png`} alt="F_Heart Icon" /> {likeCount}
             </button>
             <button className="F_share-button" onClick={handlePopupToggle}>
-              <img src="/images/공유.png" alt="F_Share Icon" /> 공유하기
+              <img src={`${process.env.PUBLIC_URL}/images/공유.png`} alt="F_Share Icon" /> 공유하기
             </button>
           </div>
           <Link to = "/login" className="F_funding-button">펀딩하기</Link>
@@ -182,9 +180,14 @@ const SalesPage = () => {
         {isPopupVisible && (
           <div className="F_share-popup">
             <button className='F_kakao' onClick={() => handleSocialShare('kakao')}>
-              <img  src='/images/카카오톡.png' alt="카카오톡 아이콘"/>카카오톡으로 공유하기</button>
-            <button className='F_email' onClick={handleEmailShare}><img src='/images/링크보드.png'  alt="이메일 아이콘" />이메일로 공유하기</button>
-            <button className='F_link' onClick={() => handleSocialShare('clipboard')}><img src='/images/이메일.png' alt="클립보드 아이콘" />링크 보드에 복사하기</button>
+              <img src={`${process.env.PUBLIC_URL}/images/카카오톡.png`} alt="카카오톡 아이콘" />카카오톡으로 공유하기
+            </button>
+            <button className='F_email' onClick={handleEmailShare}>
+              <img src={`${process.env.PUBLIC_URL}/images/링크보드.png`} alt="이메일 아이콘" />이메일로 공유하기
+            </button>
+            <button className='F_link' onClick={() => handleSocialShare('clipboard')}>
+              <img src={`${process.env.PUBLIC_URL}/images/이메일.png`} alt="클립보드 아이콘" />링크 보드에 복사하기
+            </button>
             <button onClick={handlePopupToggle}>닫기</button>
           </div>
         )}

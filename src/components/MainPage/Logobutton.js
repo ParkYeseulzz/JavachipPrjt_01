@@ -47,7 +47,7 @@ const Logobutton = () => {
 
   // 로고 클릭 시 홈페이지로 이동
   const handleLogoClick = () => {
-    window.location.href = '/'; // 홈페이지로 이동
+    window.location.href = 'https://ys2ys2.github.io/JavachipPrjt_01/'; // 프로젝트 메인 페이지로 이동
   };
 
   // 검색 기능: 검색어를 최근 검색어 목록에 추가하고, 드롭다운 메뉴를 표시
